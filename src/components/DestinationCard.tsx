@@ -1,5 +1,6 @@
 import { Destination } from "../types/destination";
 import { useLanguage } from "../context/LanguageContext";
+import CategoryIcon from "./CategoryIcon";
 
 export default function DestinationCard({ place }: { place: Destination }) {
   const { language, t } = useLanguage();
@@ -7,7 +8,15 @@ export default function DestinationCard({ place }: { place: Destination }) {
   return (
     <div className="card">
       <h3>{language === "en" ? place.name.en : place.name.ar}</h3>
-      <p>{t("Type:", "النوع:")} {place.categories.join(", ")}</p>
+      <div className="card-categories">
+        {place.categories.map((category, index) => (
+          <span key={category} className="category-badge">
+            <CategoryIcon category={category} size="small" />
+            <span>{category}</span>
+            {index < place.categories.length - 1 && <span className="category-separator">, </span>}
+          </span>
+        ))}
+      </div>
       <p>{t("Region:", "المنطقة:")} {language === "en" ? place.region.en : place.region.ar}</p>
     </div>
   );

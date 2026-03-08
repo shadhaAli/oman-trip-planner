@@ -266,6 +266,371 @@ export function getDestinations(): Destination[] {
       ticket_cost_omr: 3,
       recommended_months: [10,11,12,1,2,3,4],
       crowd_level: 2
+    },
+
+    // Additional places to reach 40+
+    {
+      id: "muscat6",
+      name: { en: "Al Riyam Park", ar: "مجلس الريام" },
+      lat: 23.61,
+      lng: 58.58,
+      region: { en: "muscat", ar: "مسقط" },
+      categories: ["nature"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 45,
+      ticket_cost_omr: 0,
+      recommended_months: [10,11,12,1,2,3,4],
+      crowd_level: 3
+    },
+
+    {
+      id: "muscat7",
+      name: { en: "Bait Al Zubair", ar: "بيت الزبور" },
+      lat: 23.615,
+      lng: 58.592,
+      region: { en: "muscat", ar: "مسقط" },
+      categories: ["culture"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 60,
+      ticket_cost_omr: 2,
+      recommended_months: [10,11,12,1,2,3,4],
+      crowd_level: 2
+    },
+
+    {
+      id: "muscat8",
+      name: { en: "Al Saadiya Beach", ar: "شاطئ السديرية" },
+      lat: 23.56,
+      lng: 58.52,
+      region: { en: "muscat", ar: "مسقط" },
+      categories: ["beach"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 90,
+      ticket_cost_omr: 0,
+      recommended_months: [3,4,5,6,7,8,9],
+      crowd_level: 2
+    },
+
+    {
+      id: "dakhiliya5",
+      name: { en: "Izki", ar: "إزكي" },
+      lat: 22.9333,
+      lng: 57.7667,
+      region: { en: "dakhiliya", ar: "الداخلية" },
+      categories: ["culture","nature"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 60,
+      ticket_cost_omr: 0,
+      recommended_months: [10,11,12,1,2,3,4],
+      crowd_level: 1
+    },
+
+    {
+      id: "dakhiliya6",
+      name: { en: "Sultan Qaboos Dam", ar: "سد السلطان قابوس" },
+      lat: 23.05,
+      lng: 57.3,
+      region: { en: "dakhiliya", ar: "الداخلية" },
+      categories: ["nature"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 45,
+      ticket_cost_omr: 0,
+      recommended_months: [10,11,12,1,2,3,4],
+      crowd_level: 1
+    },
+
+    {
+      id: "sharqiya4",
+      name: { en: "Wadi Tiwi", ar: "وادي تيوين" },
+      lat: 23.0833,
+      lng: 58.5667,
+      region: { en: "sharqiya", ar: "الشرقية" },
+      categories: ["nature","mountain"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 90,
+      ticket_cost_omr: 2,
+      recommended_months: [10,11,12,1,2,3,4],
+      crowd_level: 2
+    },
+
+    {
+      id: "sharqiya5",
+      name: { en: "Sur", ar: "صور" },
+      lat: 22.5667,
+      lng: 59.2833,
+      region: { en: "sharqiya", ar: "الشرقية" },
+      categories: ["culture","beach"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 120,
+      ticket_cost_omr: 0,
+      recommended_months: [10,11,12,1,2,3,4],
+      crowd_level: 2
+    },
+
+    {
+      id: "sharqiya6",
+      name: { en: "Ras Al Jinz", ar: "رأس الجينز" },
+      lat: 21.5167,
+      lng: 59.0667,
+      region: { en: "sharqiya", ar: "الشرقية" },
+      categories: ["nature","beach"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 90,
+      ticket_cost_omr: 5,
+      recommended_months: [10,11,12,1,2,3,4],
+      crowd_level: 2
+    },
+
+    {
+      id: "batinah3",
+      name: { en: "Sohar", ar: "صحار" },
+      lat: 24.35,
+      lng: 56.7,
+      region: { en: "batinah", ar: "الباطنة" },
+      categories: ["culture","beach"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 90,
+      ticket_cost_omr: 0,
+      recommended_months: [10,11,12,1,2,3,4],
+      crowd_level: 2
+    },
+
+    {
+      id: "batinah4",
+      name: { en: "Sohar Fort", ar: "قلعة صحار" },
+      lat: 24.3444,
+      lng: 56.7075,
+      region: { en: "batinah", ar: "الباطنة" },
+      categories: ["culture"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 60,
+      ticket_cost_omr: 3,
+      recommended_months: [10,11,12,1,2,3,4],
+      crowd_level: 2
+    },
+
+    {
+      id: "musandam3",
+      name: { en: "Telegraph Island", ar: "جزيرة التلغراف" },
+      lat: 26.0833,
+      lng: 56.0667,
+      region: { en: "musandam", ar: "مسندم" },
+      categories: ["nature","beach"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 60,
+      ticket_cost_omr: 0,
+      recommended_months: [10,11,12,1,2,3,4],
+      crowd_level: 1
+    },
+
+    {
+      id: "musandam4",
+      name: { en: "Bander Al Khiran", ar: "بندر خيران" },
+      lat: 26.2,
+      lng: 56.4,
+      region: { en: "musandam", ar: "مسندم" },
+      categories: ["beach","nature"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 90,
+      ticket_cost_omr: 0,
+      recommended_months: [10,11,12,1,2,3,4],
+      crowd_level: 2
+    },
+
+    {
+      id: "dhofar3",
+      name: { en: "Al Hafa", ar: "الحافة" },
+      lat: 17.0,
+      lng: 54.1,
+      region: { en: "dhofar", ar: "ظفار" },
+      categories: ["culture","nature"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 60,
+      ticket_cost_omr: 0,
+      recommended_months: [6,7,8,9],
+      crowd_level: 1
+    },
+
+    {
+      id: "dhofar4",
+      name: { en: "Ayn Razat", ar: "عين رزات" },
+      lat: 17.0833,
+      lng: 54.1333,
+      region: { en: "dhofar", ar: "ظفار" },
+      categories: ["nature"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 90,
+      ticket_cost_omr: 0,
+      recommended_months: [6,7,8,9],
+      crowd_level: 1
+    },
+
+    {
+      id: "dhofar5",
+      name: { en: "Wadi Darbat", ar: "وادي دربات" },
+      lat: 17.0833,
+      lng: 54.1667,
+      region: { en: "dhofar", ar: "ظفار" },
+      categories: ["nature","mountain"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 120,
+      ticket_cost_omr: 0,
+      recommended_months: [6,7,8,9],
+      crowd_level: 2
+    },
+
+    {
+      id: "dhofar6",
+      name: { en: "Taqa", ar: "طاقية" },
+      lat: 16.8333,
+      lng: 53.8333,
+      region: { en: "dhofar", ar: "ظفار" },
+      categories: ["culture","beach"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 60,
+      ticket_cost_omr: 0,
+      recommended_months: [6,7,8,9],
+      crowd_level: 1
+    },
+
+    {
+      id: "buraimi2",
+      name: { en: "Al Sunaysilah", ar: "السنيصلة" },
+      lat: 24.3167,
+      lng: 55.85,
+      region: { en: "buraimi", ar: "بريمي" },
+      categories: ["nature"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 45,
+      ticket_cost_omr: 0,
+      recommended_months: [10,11,12,1,2,3,4],
+      crowd_level: 1
+    },
+
+    {
+      id: "sharqiya7",
+      name: { en: "Ibra", ar: "عبري" },
+      lat: 22.6833,
+      lng: 58.55,
+      region: { en: "sharqiya", ar: "الشرقية" },
+      categories: ["culture"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 60,
+      ticket_cost_omr: 0,
+      recommended_months: [10,11,12,1,2,3,4],
+      crowd_level: 2
+    },
+
+    {
+      id: "sharqiya8",
+      name: { en: "Al Mudhaby", ar: "المضيبي" },
+      lat: 22.45,
+      lng: 58.7,
+      region: { en: "sharqiya", ar: "الشرقية" },
+      categories: ["culture","desert"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 90,
+      ticket_cost_omr: 0,
+      recommended_months: [10,11,12,1,2,3,4],
+      crowd_level: 1
+    },
+
+    {
+      id: "dakhiliya7",
+      name: { en: "Al Hamra", ar: "الحمراء" },
+      lat: 23.0833,
+      lng: 57.3167,
+      region: { en: "dakhiliya", ar: "الداخلية" },
+      categories: ["culture","mountain"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 60,
+      ticket_cost_omr: 0,
+      recommended_months: [10,11,12,1,2,3,4],
+      crowd_level: 2
+    },
+
+    {
+      id: "dakhiliya8",
+      name: { en: "Misfat Al Abriyyin", ar: "مصفوت العبريين" },
+      lat: 23.1167,
+      lng: 57.2833,
+      region: { en: "dakhiliya", ar: "الداخلية" },
+      categories: ["culture","nature"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 60,
+      ticket_cost_omr: 0,
+      recommended_months: [10,11,12,1,2,3,4],
+      crowd_level: 2
+    },
+
+    {
+      id: "batinah5",
+      name: { en: "Liwa", ar: "ليوا" },
+      lat: 23.95,
+      lng: 57.55,
+      region: { en: "batinah", ar: "الباطنة" },
+      categories: ["nature","desert"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 90,
+      ticket_cost_omr: 0,
+      recommended_months: [10,11,12,1,2,3,4],
+      crowd_level: 1
+    },
+
+    {
+      id: "muscat9",
+      name: { en: "Markaz Al Bahja", ar: "مركز بهجة" },
+      lat: 23.65,
+      lng: 58.62,
+      region: { en: "muscat", ar: "مسقط" },
+      categories: ["culture","food"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 90,
+      ticket_cost_omr: 0,
+      recommended_months: [10,11,12,1,2,3,4],
+      crowd_level: 3
+    },
+
+    {
+      id: "muscat10",
+      name: { en: "Shangri-La Barr Al Jissah", ar: "شانغريلا بر الجصة" },
+      lat: 23.55,
+      lng: 58.48,
+      region: { en: "muscat", ar: "مسقط" },
+      categories: ["beach","nature"],
+      company: { en: "Shangri-La", ar: "شانغريلا" },
+      avg_visit_duration_minutes: 180,
+      ticket_cost_omr: 20,
+      recommended_months: [10,11,12,1,2,3,4],
+      crowd_level: 2
+    },
+
+    {
+      id: "sharqiya9",
+      name: { en: "Fins Beach", ar: "شاطئ فنس" },
+      lat: 22.2333,
+      lng: 59.3833,
+      region: { en: "sharqiya", ar: "الشرقية" },
+      categories: ["beach"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 60,
+      ticket_cost_omr: 0,
+      recommended_months: [10,11,12,1,2,3,4],
+      crowd_level: 2
+    },
+
+    {
+      id: "dakhiliya9",
+      name: { en: "Birkat Al Mauz", ar: "بركة الموز" },
+      lat: 23.1333,
+      lng: 57.2667,
+      region: { en: "dakhiliya", ar: "الداخلية" },
+      categories: ["nature","culture"],
+      company: { en: "Oman Tourism", ar: "سياحة عمان" },
+      avg_visit_duration_minutes: 45,
+      ticket_cost_omr: 0,
+      recommended_months: [10,11,12,1,2,3,4],
+      crowd_level: 2
     }
   ];
 }
