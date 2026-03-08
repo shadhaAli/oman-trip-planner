@@ -3,28 +3,27 @@
 import { MapContainer, TileLayer, Marker, Popup, Polyline } from "react-leaflet";
 import { Destination } from "../types/destination";
 import "leaflet/dist/leaflet.css";
-import { LatLngExpression, Icon } from "leaflet";
+import { LatLngExpression, Icon, divIcon } from "leaflet";
 
-const startIcon = new Icon({
-  iconUrl: "/icon/start.png",
-  iconSize: [32, 32],
-  iconAnchor: [16, 32],
-  popupAnchor: [0, -32]
-});
+function createCircleIcon(color: string, size: number = 24) {
+  return divIcon({
+    className: "custom-marker",
+    html: `<div style="
+      background-color: ${color};
+      width: ${size}px;
+      height: ${size}px;
+      border-radius: 50%;
+      border: 2px solid white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    "></div>`,
+    iconSize: [size, size],
+    iconAnchor: [size / 2, size / 2],
+  });
+}
 
-const endIcon = new Icon({
-  iconUrl: "/icon/end.png",
-  iconSize: [32, 32],
-  iconAnchor: [16, 32],
-  popupAnchor: [0, -32]
-});
-
-const defaultIcon = new Icon({
-  iconUrl: "/icon/mountain.png",
-  iconSize: [24, 24],
-  iconAnchor: [12, 24],
-  popupAnchor: [0, -24]
-});
+const startIcon = createCircleIcon("#22c55e", 28);
+const endIcon = createCircleIcon("#ef4444", 28);
+const defaultIcon = createCircleIcon("#3b82f6", 22);
 
 function MapComponent({ places }: { places: Destination[] }) {
   const route: LatLngExpression[] = places.map(p => [p.lat, p.lng] as LatLngExpression);
