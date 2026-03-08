@@ -1,66 +1,68 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
 
-export default function Home() {
+import { useState } from "react";
+import { getDestinations } from "../lib/get-destinations";
+import TripMap from "../components/TripMap";
+import DestinationCard from "../components/DestinationCard";
+import { LanguageProvider, useLanguage } from "../context/LanguageContext";
+
+function HomeContent() {
+  const allPlaces = getDestinations();
+  const { language, setLanguage, t } = useLanguage();
+
+  const [filter, setFilter] = useState("all");
+
+  const filtered =
+    filter === "all"
+      ? allPlaces
+      : allPlaces.filter(p => p.categories.includes(filter));
+
+  const toggleLanguage = () => {
+    const newLang = language === "en" ? "ar" : "en";
+    setLanguage(newLang);
+    // Update document direction for RTL support
+    document.documentElement.dir = newLang === "ar" ? "rtl" : "ltr";
+    document.documentElement.lang = newLang;
+  };
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div className="container">
+
+      <div className="header">
+        <h1>{t("Oman Smart Trip Planner", "مخطط رحلات عُمان الذكي")}</h1>
+        <button className="lang-toggle" onClick={toggleLanguage}>
+          {language === "en" ? "العربية" : "English"}
+        </button>
+      </div>
+
+      <div className="filters">
+        <button onClick={() => setFilter("all")}>{t("All", "الكل")}</button>
+        <button onClick={() => setFilter("nature")}>{t("Nature", "طبيعة")}</button>
+        <button onClick={() => setFilter("beach")}>{t("Beach", "شاطئ")}</button>
+        <button onClick={() => setFilter("mountain")}>{t("Mountain", "جبل")}</button>
+        <button onClick={() => setFilter("culture")}>{t("Culture", "ثقافة")}</button>
+        <button onClick={() => setFilter("desert")}>{t("Desert", "صحراء")}</button>
+      </div>
+
+      <div className="grid">
+        {filtered.map(p => (
+          <DestinationCard key={p.id} place={p} />
+        ))}
+      </div>
+
+      <h2>{t("Trip Route", "مسار الرحلة")}</h2>
+
+      <TripMap places={filtered} />
+
     </div>
   );
 }
+
+export default function Home() {
+  return (
+    <LanguageProvider>
+      <HomeContent />
+    </LanguageProvider>
+  );
+}
+
