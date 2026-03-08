@@ -19,4 +19,7 @@
 - Added 21 new places (total now 40)
 - Added pagination (10 items per page) with page navigation
 - Added results info showing current page range
+- Added Generate My Trip button with bilingual text (English/Arabic)
+- Added place selection functionality with visual indicators
+- Added custom start/end map markers
 
