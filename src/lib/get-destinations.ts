@@ -88,7 +88,7 @@ export function getDestinations(): Destination[] {
 
     {
       id: "muscat5",
-      name: { en: "Qurum Beach", ar: "شاطئ قرم" },
+      name: { en: "Qurum Beach", ar: "شاطئ القرم" },
       lat: 23.5932,
       lng: 58.5418,
       region: { en: "muscat", ar: "مسقط" },
@@ -102,7 +102,7 @@ export function getDestinations(): Destination[] {
 
     {
       id: "sharqiya2",
-      name: { en: "Wahiba Sands", ar: "رمال الوهيب" },
+      name: { en: "Wahiba Sands", ar: "رمال الوهيبة" },
       lat: 22.4167,
       lng: 58.9667,
       region: { en: "sharqiya", ar: "الشرقية" },
@@ -130,7 +130,7 @@ export function getDestinations(): Destination[] {
 
     {
       id: "dakhiliya3",
-      name: { en: "Jabal Akhdar", ar: "جبل الأخضر" },
+      name: { en: "Jabal Akhdar", ar: "الجبل الأخضر" },
       lat: 23.0833,
       lng: 57.2333,
       region: { en: "dakhiliya", ar: "الداخلية" },
@@ -231,7 +231,7 @@ export function getDestinations(): Destination[] {
       name: { en: "Al Buraimi Souq", ar: "سوق البريمي" },
       lat: 24.2508,
       lng: 55.7931,
-      region: { en: "buraimi", ar: "بريمي" },
+      region: { en: "buraimi", ar: "البريمي" },
       categories: ["culture","food"],
       company: { en: "Oman Tourism", ar: "سياحة عمان" },
       avg_visit_duration_minutes: 90,
@@ -242,7 +242,7 @@ export function getDestinations(): Destination[] {
 
     {
       id: "sharqiya3",
-      name: { en: "Wadi Shab", ar: "وادي شعب" },
+      name: { en: "Wadi Shab", ar: "وادي شاب" },
       lat: 23.15,
       lng: 58.0667,
       region: { en: "sharqiya", ar: "الشرقية" },
@@ -256,7 +256,7 @@ export function getDestinations(): Destination[] {
 
     {
       id: "dakhiliya4",
-      name: { en: "Falaj Daris", ar: "فلج داريس" },
+      name: { en: "Falaj Daris", ar: "فلج دارس" },
       lat: 22.8333,
       lng: 57.55,
       region: { en: "dakhiliya", ar: "الداخلية" },
@@ -268,10 +268,9 @@ export function getDestinations(): Destination[] {
       crowd_level: 2
     },
 
-    // Additional places to reach 40+
     {
       id: "muscat6",
-      name: { en: "Al Riyam Park", ar: "مجلس الريام" },
+      name: { en: "Al Riyam Park", ar: "حديقة الريام" },
       lat: 23.61,
       lng: 58.58,
       region: { en: "muscat", ar: "مسقط" },
@@ -285,7 +284,7 @@ export function getDestinations(): Destination[] {
 
     {
       id: "muscat7",
-      name: { en: "Bait Al Zubair", ar: "بيت الزبور" },
+      name: { en: "Bait Al Zubair", ar: "بيت الزبير" },
       lat: 23.615,
       lng: 58.592,
       region: { en: "muscat", ar: "مسقط" },
@@ -294,20 +293,6 @@ export function getDestinations(): Destination[] {
       avg_visit_duration_minutes: 60,
       ticket_cost_omr: 2,
       recommended_months: [10,11,12,1,2,3,4],
-      crowd_level: 2
-    },
-
-    {
-      id: "muscat8",
-      name: { en: "Al Saadiya Beach", ar: "شاطئ السديرية" },
-      lat: 23.56,
-      lng: 58.52,
-      region: { en: "muscat", ar: "مسقط" },
-      categories: ["beach"],
-      company: { en: "Oman Tourism", ar: "سياحة عمان" },
-      avg_visit_duration_minutes: 90,
-      ticket_cost_omr: 0,
-      recommended_months: [3,4,5,6,7,8,9],
       crowd_level: 2
     },
 
@@ -325,23 +310,10 @@ export function getDestinations(): Destination[] {
       crowd_level: 1
     },
 
-    {
-      id: "dakhiliya6",
-      name: { en: "Sultan Qaboos Dam", ar: "سد السلطان قابوس" },
-      lat: 23.05,
-      lng: 57.3,
-      region: { en: "dakhiliya", ar: "الداخلية" },
-      categories: ["nature"],
-      company: { en: "Oman Tourism", ar: "سياحة عمان" },
-      avg_visit_duration_minutes: 45,
-      ticket_cost_omr: 0,
-      recommended_months: [10,11,12,1,2,3,4],
-      crowd_level: 1
-    },
-
+    
     {
       id: "sharqiya4",
-      name: { en: "Wadi Tiwi", ar: "وادي تيوين" },
+      name: { en: "Wadi Tiwi", ar: "وادي طيوي" },
       lat: 23.0833,
       lng: 58.5667,
       region: { en: "sharqiya", ar: "الشرقية" },
@@ -369,7 +341,7 @@ export function getDestinations(): Destination[] {
 
     {
       id: "sharqiya6",
-      name: { en: "Ras Al Jinz", ar: "رأس الجينز" },
+      name: { en: "Ras Al Jinz", ar: "رأس الجنز" },
       lat: 21.5167,
       lng: 59.0667,
       region: { en: "sharqiya", ar: "الشرقية" },
@@ -425,7 +397,7 @@ export function getDestinations(): Destination[] {
 
     {
       id: "musandam4",
-      name: { en: "Bander Al Khiran", ar: "بندر خيران" },
+      name: { en: "Bander Al Khiran", ar: "بندر الخيران" },
       lat: 26.2,
       lng: 56.4,
       region: { en: "musandam", ar: "مسندم" },
@@ -481,7 +453,7 @@ export function getDestinations(): Destination[] {
 
     {
       id: "dhofar6",
-      name: { en: "Taqa", ar: "طاقية" },
+      name: { en: "Taqa", ar: "طاقة" },
       lat: 16.8333,
       lng: 53.8333,
       region: { en: "dhofar", ar: "ظفار" },
@@ -495,10 +467,10 @@ export function getDestinations(): Destination[] {
 
     {
       id: "buraimi2",
-      name: { en: "Al Sunaysilah", ar: "السنيصلة" },
+      name: { en: "Al Sunaysilah", ar: "السنيسلة" },
       lat: 24.3167,
       lng: 55.85,
-      region: { en: "buraimi", ar: "بريمي" },
+      region: { en: "buraimi", ar: "البريمي" },
       categories: ["nature"],
       company: { en: "Oman Tourism", ar: "سياحة عمان" },
       avg_visit_duration_minutes: 45,
@@ -551,7 +523,7 @@ export function getDestinations(): Destination[] {
 
     {
       id: "dakhiliya8",
-      name: { en: "Misfat Al Abriyyin", ar: "مصفوت العبريين" },
+      name: { en: "Misfat Al Abriyyin", ar: "مسفاة العبريين" },
       lat: 23.1167,
       lng: 57.2833,
       region: { en: "dakhiliya", ar: "الداخلية" },
@@ -565,7 +537,7 @@ export function getDestinations(): Destination[] {
 
     {
       id: "batinah5",
-      name: { en: "Liwa", ar: "ليوا" },
+      name: { en: "Liwa", ar: "لوى" },
       lat: 23.95,
       lng: 57.55,
       region: { en: "batinah", ar: "الباطنة" },
@@ -593,12 +565,12 @@ export function getDestinations(): Destination[] {
 
     {
       id: "muscat10",
-      name: { en: "Shangri-La Barr Al Jissah", ar: "شانغريلا بر الجصة" },
+      name: { en: "Shangri-La Barr Al Jissah", ar: " بر الجصة" },
       lat: 23.55,
       lng: 58.48,
       region: { en: "muscat", ar: "مسقط" },
       categories: ["beach","nature"],
-      company: { en: "Shangri-La", ar: "شانغريلا" },
+      company: { en: "Shangri-La", ar: "الشرقية" },
       avg_visit_duration_minutes: 180,
       ticket_cost_omr: 20,
       recommended_months: [10,11,12,1,2,3,4],

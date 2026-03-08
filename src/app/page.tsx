@@ -15,6 +15,7 @@ function HomeContent() {
 
   const [filter, setFilter] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
+  const [selectedPlaces, setSelectedPlaces] = useState<string[]>([]);
 
   const filtered =
     filter === "all"
@@ -37,6 +38,32 @@ function HomeContent() {
   const handleFilterChange = (newFilter: string) => {
     setFilter(newFilter);
     setCurrentPage(1);
+  };
+
+  const togglePlaceSelection = (placeId: string) => {
+    setSelectedPlaces(prev => {
+      if (prev.includes(placeId)) {
+        return prev.filter(id => id !== placeId);
+      }
+      return [...prev, placeId];
+    });
+  };
+
+  const generateTrip = () => {
+    if (selectedPlaces.length === 0) {
+      alert(language === "en" ? "Please select at least one place" : "يرجى اختيار مكان واحد على الأقل");
+      return;
+    }
+    // Filter places based on selection
+    const tripPlaces = allPlaces.filter(p => selectedPlaces.includes(p.id));
+    // Show trip - in this case we just display the filtered places
+    setFilter("all");
+    setCurrentPage(1);
+    alert(language === "en" ? `Trip generated with ${selectedPlaces.length} places!` : `تم إنشاء رحلة بـ ${selectedPlaces.length} أماكن!`);
+  };
+
+  const clearSelection = () => {
+    setSelectedPlaces([]);
   };
 
   const categories = [
@@ -71,9 +98,34 @@ function HomeContent() {
         ))}
       </div>
 
+      <div className="selection-bar">
+        <span className="selection-count">
+          {t("Selected:", "المحدد:")} {selectedPlaces.length} {t("places", "أماكن")}
+        </span>
+        <div className="selection-buttons">
+          <button className="generate-btn" onClick={generateTrip}>
+            {t("Generate My Trip", "إنشاء رحلتي")}
+          </button>
+          {selectedPlaces.length > 0 && (
+            <button className="clear-btn" onClick={clearSelection}>
+              {t("Clear", "مسح")}
+            </button>
+          )}
+        </div>
+      </div>
+
       <div className="grid">
         {currentPlaces.map(p => (
-          <DestinationCard key={p.id} place={p} />
+          <div 
+            key={p.id} 
+            className={`card-wrapper ${selectedPlaces.includes(p.id) ? 'selected' : ''}`}
+            onClick={() => togglePlaceSelection(p.id)}
+          >
+            <DestinationCard place={p} />
+            <div className="select-indicator">
+              {selectedPlaces.includes(p.id) ? "✓" : "+"}
+            </div>
+          </div>
         ))}
       </div>
 
