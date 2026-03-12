@@ -7,6 +7,9 @@ export default function DestinationCard({ place }: { place: Destination }) {
   
   return (
     <div className="card">
+      <div className="card-image">
+        <img src={place.image} alt={language === "en" ? place.name.en : place.name.ar} />
+      </div>
       <h3>{language === "en" ? place.name.en : place.name.ar}</h3>
       <div className="card-categories">
         {place.categories.map((category, index) => (
@@ -21,3 +24,4 @@ export default function DestinationCard({ place }: { place: Destination }) {
     </div>
   );
 }
+

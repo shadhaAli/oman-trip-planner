@@ -1,25 +1,61 @@
-# TODO: Add Icons for Categories and Places
+# Oman Trip Planner - Google Maps-like Enhancements Plan
 
-## Plan:
-1. [x] Understand the codebase structure and available icons
-2. [x] Create category icon helper component/function
-3. [x] Update DestinationCard to display category icons
-4. [x] Update filter buttons in page.tsx with icons
-5. [x] Add CSS styling for icons
-6. [x] Add more places (40 total)
-7. [x] Add pagination system
+## Information Gathered
+- **Current Implementation**: Uses Leaflet with OSRM for routes, destination selection UI, Arabic/English support
+- **Key Files**: 
+  - `src/components/MapComponent.tsx` - Leaflet map with route calculation
+  - `src/components/TripMap.tsx` - Wrapper with dynamic import
+  - `src/app/page.tsx` - Main page with trip planning UI
+  - `src/lib/get-destinations.ts` - 40+ Oman destinations with lat/lng data
+  - `src/app/globals.css` - Styling with RTL support
 
-## Status: Completed ✓
+## Plan
 
-### Summary:
-- Created CategoryIcon.tsx component for category icons
-- Updated DestinationCard.tsx to show category icons with badges
-- Updated page.tsx filter buttons with icons
-- Added CSS styling for category badges, pagination, and buttons
-- Added 21 new places (total now 40)
-- Added pagination (10 items per page) with page navigation
-- Added results info showing current page range
-- Added Generate My Trip button with bilingual text (English/Arabic)
-- Added place selection functionality with visual indicators
-- Added custom start/end map markers
+### 1. Map Component Enhancements ✅
+- [x] Added `showRoute` prop to TripMap
+- [x] Updated page.tsx to use route when in trip mode
+- [ ] Add traffic layer overlay
+- [ ] Add street view integration
+- [ ] Real-time route recalculation
 
+### 2. Route Planning UI ✅
+- [x] Trip mode with numbered itinerary (start/end markers)
+- [x] Route info panel (distance, time, stops)
+- [ ] Drag-and-drop route reordering
+- [ ] Add/remove stops mid-trip
+- [ ] Reverse route option
+
+### 3. Advanced Features
+- [ ] Search bar with autocomplete (Google Places)
+- [ ] Traffic conditions overlay
+- [ ] Multiple route options (fastest, scenic, etc.)
+- [ ] Export trip (KML, GPX, PDF)
+- [ ] Save/share trips
+
+### 4. Visual Improvements
+- [ ] Google Maps-style controls (zoom, layers)
+- [ ] 3D building view toggle
+- [ ] Street View pegman
+- [ ] Custom styled map tiles
+
+### 5. Mobile Optimizations
+- [ ] Touch gestures (pinch zoom, drag)
+- [ ] Fullscreen map mode
+- [ ] Geolocation "center on me"
+
+## Dependent Files to Edit
+```
+src/components/MapComponent.tsx  - Add Google Maps API integration
+src/app/page.tsx               - Add search & advanced controls [Partial ✅]
+src/components/TripMap.tsx      - Route visualization enhancements [Partial ✅]
+src/app/globals.css            - Google Maps-style styling
+```
+
+## Followup Steps
+1. Install Google Maps API key
+2. Add search autocomplete component
+3. Implement drag-to-reorder stops
+4. Add traffic/satellite layers
+5. Test on mobile devices
+
+**Next Step**: Implement Google Maps API integration or provide more image links?

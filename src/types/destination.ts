@@ -4,6 +4,7 @@ export interface Destination {
     en: string;
     ar: string;
   };
+  image: string;
   lat: number;
   lng: number;
   region: {
@@ -20,3 +21,4 @@ export interface Destination {
   recommended_months: number[];
   crowd_level: number;
 }
+
