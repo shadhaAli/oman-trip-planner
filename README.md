@@ -1,3 +1,8 @@
+## Project Preview
+![Project Screenshot]( 
+<img width="1237" height="599" alt="oman trip planning" src="https://github.com/user-attachments/assets/2c065f2d-e161-4d0d-8728-d9f1dc9e3723" /> ) 
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
